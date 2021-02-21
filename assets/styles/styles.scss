@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat&family=Noto+Sans+SC&family=Nunito&family=Open+Sans&family=Poppins&family=Roboto+Mono&family=Source+Sans+Pro&display=swap');
+
+$nav-width-main-margin: 5rem;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font: inherit;
+    vertical-align: baseline;
+    scroll-behavior: smooth;
+    font-family: 'Fira Code', monospace; 
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 14px;
+    line-height: 18px;
+    height: 100%;
+    background-color: #1c2237;
+    color: #ffffff;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: rgb(0, 0, 0);
+    }
+
+    &::-webkit-slider-thumb {
+        background: #3c4564;
+    }
+
+
+}
+
+.sidebar-nav {
+    width: $nav-width-main-margin;
+    height: 100%;
+    background-color: #252d47;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+    position: fixed;
+
+    .sidebar-ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+
+        .sidebar-li {
+            width: 100%;
+            padding: 10px 0;
+            // border: 1px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            a {
+                text-decoration: none;
+                color: #ffffff;
+            }
+            &:last-child {
+                margin-top: auto;
+            }
+        }
+    }
+}
+
+main {
+    margin-left: $nav-width-main-margin;
+    // padding: 1em;
+
+    header {
+        background: #3c4564;
+        box-shadow: 0px 2px 12px 1px rgba(13,13,13,0.5);
+        padding: 10px 0;
+        // position: fixed;
+    }
+}

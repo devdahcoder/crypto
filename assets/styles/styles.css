@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat&family=Noto+Sans+SC&family=Nunito&family=Open+Sans&family=Poppins&family=Roboto+Mono&family=Source+Sans+Pro&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font: inherit;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+  font-family: 'Fira Code', monospace;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  height: 100%;
+  background-color: #1c2237;
+  color: #ffffff;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-slider-thumb {
+  background: #3c4564;
+}
+
+.sidebar-nav {
+  width: 5rem;
+  height: 100%;
+  background-color: #252d47;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  position: fixed;
+}
+
+.sidebar-nav .sidebar-ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-nav .sidebar-ul .sidebar-li {
+  width: 100%;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar-nav .sidebar-ul .sidebar-li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.sidebar-nav .sidebar-ul .sidebar-li:last-child {
+  margin-top: auto;
+}
+
+main {
+  margin-left: 5rem;
+}
+
+main header {
+  background: #3c4564;
+  -webkit-box-shadow: 0px 2px 12px 1px rgba(13, 13, 13, 0.5);
+          box-shadow: 0px 2px 12px 1px rgba(13, 13, 13, 0.5);
+  padding: 10px 0;
+}
+/*# sourceMappingURL=styles.css.map */
