@@ -2,6 +2,43 @@
 
 $nav-width-main-margin: 5rem;
 
+
+@mixin button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border: 0px solid #000;
+    align-items: stretch;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+@mixin svg-btn {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    align-items: center;
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    outline: none;
+}
+
+@mixin svg-container {
+    cursor: pointer;
+    vertical-align: baseline;
+    border: 0 solid #000;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -41,6 +78,7 @@ body {
     background-color: #252d47;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
     position: fixed;
+    z-index: 1;
 
     .sidebar-ul {
         list-style: none;
@@ -76,7 +114,115 @@ main {
     header {
         background: #3c4564;
         box-shadow: 0px 2px 12px 1px rgba(13,13,13,0.5);
-        padding: 10px 0;
+        padding: 10px 30px;
         // position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 0;
+
+        form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .form-btn-container {
+                @include button-container();
+                margin-right: 5px;
+
+                button {
+                    @include svg-btn();
+
+                    .svg-container {
+                        @include svg-container();
+                    }
+                }
+            }
+
+            .input-container {
+                width: 500px;
+                label {
+                    display: flex;
+                    height: 36px;
+                    flex: 1 0 0;
+                    border: 0px solid #000;
+                    outline: none;
+                    input {
+                        background: #3c4564;
+                        width: 100%;
+                        height: 100%;
+                        padding: 0 10px;
+                        border: 0px solid #000;
+                        outline: none;
+                    }
+                }
+            }
+
+        }
+
+
+        .user-display {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .notification-container {
+                @include button-container();
+                background: #3c4564;
+                position: relative;
+                button {
+                    @include svg-btn();
+                    background: #3c4564;
+
+                    .svg-container {
+                        @include svg-container();
+                    }
+                }
+
+                .count {
+                    background-color: #2626e7;
+                    color: #ffffff;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    text-align: center;
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: -5px;
+                    top: -5px;
+                }
+            }
+
+            .user-image-container {
+                margin-left: 25px;
+                .user-image {
+                    color: rgba(var(--i1d,38,38,38),1);
+                    white-space: nowrap;
+                    background: #979797;
+                    border-radius: 5px;
+                    display: block;
+                    flex: 0 0 auto;
+                    overflow: hidden;
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+    
+                    img {
+                        white-space: nowrap;
+                        cursor: pointer;
+                        -webkit-user-drag: none;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            
+        }
+        
     }
 }
