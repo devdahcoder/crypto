@@ -465,10 +465,10 @@ main section .stock-container-display .first-stock-container {
   background: #252d47;
   -webkit-box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
           box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
-  background-image: url("../images/dele.svg");
+  background-image: url("../images/dele.svg"), url("../images/firstbg.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom;
+  background-position: bottom, center 100px;
 }
 
 main section .stock-container-display .first-stock-container .stock-details-container {
@@ -510,15 +510,47 @@ main section .stock-container-display .first-stock-container .stock-details-cont
   margin-right: 5px;
 }
 
+main section .stock-container-display .first-stock-container .drag-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #7676ff;
+  position: absolute;
+  bottom: 76px;
+  right: 140px;
+}
+
+main section .stock-container-display .first-stock-container .drag-price .drag-pointer {
+  height: 15px;
+  width: 15px;
+  background: #7676ff;
+  border: 3px solid #ffffff;
+  border-radius: 100vh;
+  -webkit-box-shadow: 0px 2px 20px #7676ff;
+          box-shadow: 0px 2px 20px #7676ff;
+  margin-top: 5px;
+}
+
 main section .stock-container-display .second-stock-container {
   border: solid 1px #191e30;
   background: #252d47;
   -webkit-box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
           box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
-  background-image: url("../images/sec.svg");
+  background-image: url("../images/sec.svg"), url("../images/second-stockline-.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom;
+  background-position: bottom, center 148px;
 }
 
 main section .stock-container-display .second-stock-container .stock-price-container {
@@ -551,15 +583,45 @@ main section .stock-container-display .second-stock-container .stock-price-conta
   font-size: 30px;
 }
 
+main section .stock-container-display .second-stock-container .drag-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: initial;
+  color: #fba165;
+  position: absolute;
+  bottom: 40px;
+  left: 34px;
+}
+
+main section .stock-container-display .second-stock-container .drag-price .drag-pointer {
+  height: 15px;
+  width: 15px;
+  background: #fba165;
+  border: 3px solid #ffffff;
+  border-radius: 100vh;
+  -webkit-box-shadow: 0px 2px 20px #fba165;
+          box-shadow: 0px 2px 20px #fba165;
+  margin-top: 5px;
+}
+
 main section .stock-container-display .third-stock-container {
   border: solid 1px #191e30;
   background: #252d47;
   -webkit-box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
           box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
-  background-image: url("../images/tir.svg");
+  background-image: url("../images/tir.svg"), url("../images/third-line.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom;
+  background-position: bottom, center 150px;
 }
 
 main section .stock-container-display .third-stock-container .stock-price-container {
@@ -592,15 +654,47 @@ main section .stock-container-display .third-stock-container .stock-price-contai
   font-size: 30px;
 }
 
+main section .stock-container-display .third-stock-container .drag-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #13d0a7;
+  position: absolute;
+  bottom: 72px;
+  left: 37px;
+}
+
+main section .stock-container-display .third-stock-container .drag-price .drag-pointer {
+  height: 15px;
+  width: 15px;
+  background: #13d0a7;
+  border: 3px solid #ffffff;
+  border-radius: 100vh;
+  -webkit-box-shadow: 0px 2px 20px #13d0a7;
+          box-shadow: 0px 2px 20px #13d0a7;
+  margin-top: 5px;
+}
+
 main section .stock-container-display .fourth-stock-container {
   border: solid 1px #191e30;
   background: #252d47;
   -webkit-box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
           box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
-  background-image: url("../images/four.svg");
+  background-image: url("../images/four.svg"), url("../images/fourth-line.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom;
+  background-position: bottom, center 110px;
 }
 
 main section .stock-container-display .fourth-stock-container .stock-price-container {
@@ -800,6 +894,38 @@ main section .stock-container-display .fourth-stock-container .scroll-btn button
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+main section .stock-container-display .fourth-stock-container .drag-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #ff8006;
+  position: absolute;
+  bottom: 98px;
+  left: 113px;
+}
+
+main section .stock-container-display .fourth-stock-container .drag-price .drag-pointer {
+  height: 15px;
+  width: 15px;
+  background: #ff8006;
+  border: 3px solid #ffffff;
+  border-radius: 100vh;
+  -webkit-box-shadow: 0px 2px 20px #ff8006;
+          box-shadow: 0px 2px 20px #ff8006;
+  margin-top: 5px;
 }
 
 main section .assets-container {
