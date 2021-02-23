@@ -3,6 +3,21 @@
 $nav-width-main-margin: 5rem;
 
 
+$paragraph-size: 17px;
+$color-white: #ffffff;
+$stock-font-size: 15px;
+$current-balance-font-size: 30px;
+
+@mixin stockBg($bgImage) {
+    border: solid 1px #191e30;
+    background: #252d47;
+    box-shadow: 0px 2px 48px 1px rgba(23,27,41,0.43);
+    background-image: url($bgImage);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
 @mixin button-container {
     display: flex;
     align-items: center;
@@ -58,7 +73,7 @@ body {
     color: #ffffff;
 
     &::-webkit-scrollbar {
-        width: 5px;
+        width: 10px;
     }
     
     &::-webkit-scrollbar-track {
@@ -66,7 +81,7 @@ body {
     }
 
     &::-webkit-slider-thumb {
-        background: #3c4564;
+        background: #123bcf;
     }
 
 
@@ -74,7 +89,7 @@ body {
 
 .sidebar-nav {
     width: $nav-width-main-margin;
-    height: 100%;
+    height: 100vh;
     background-color: #252d47;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
     position: fixed;
@@ -85,23 +100,28 @@ body {
         display: flex;
         align-items: center;
         flex-direction: column;
-        height: 100%;
+        height: 100vh;
 
         .sidebar-li {
             width: 100%;
-            padding: 10px 0;
-            // border: 1px solid white;
+            padding: 20px 0;
+            // border-left: 1px solid white;
             display: flex;
             align-items: center;
             justify-content: center;
+            
 
 
             a {
                 text-decoration: none;
                 color: #ffffff;
-            }
-            &:last-child {
-                margin-top: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    height: 30px;
+                }
             }
         }
     }
@@ -149,6 +169,7 @@ main {
                     border: 0px solid #000;
                     outline: none;
                     input {
+                        color: #ffffff;
                         background: #3c4564;
                         width: 100%;
                         height: 100%;
@@ -225,4 +246,461 @@ main {
         }
         
     }
+
+    section {
+        padding: 1rem;
+
+        .currency-main {
+            display: flex;
+            flex-direction: column;
+            margin: 30px 0;
+
+            .currency-header-text {
+                color: #ffffff;
+                p {
+                    font-size: 35px;
+                    line-height: 20px;
+                    font-weight: 600px;
+                }
+            }
+
+            .currency-text {
+                color: rgba(255,255,255,0.6);
+                font-size: 13px;
+                // line-height: 15px;
+                margin: 10px 0 20px 0px;
+            }
+
+            .currency-display {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+
+                .currency-list {
+                    @include button-container();
+                    margin-right: 25px;
+                    filter: blur(0.32px);
+                    
+                    
+                    
+
+                    button {
+                        @include svg-btn();
+                        
+
+                        .svg-container {
+                            @include svg-container();
+                            
+                            
+                            img {
+                                width: 45px;
+                                height: 45px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+
+
+
+        .stock-container-display {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 200px 200px 350px;
+            grid-gap: 20px;
+            margin: 50px 0;
+
+
+            .stock {
+                border-radius: 10px;
+                height: 260px;
+                padding: 20px;
+                position: relative;
+            }
+
+            .first-stock-container {
+                @include stockBg("../images/dele.svg");
+    
+                .stock-details-container {
+                    display: flex;
+                    justify-content: space-between;
+    
+                    .stock-main-price {
+                        display: flex;
+                        flex-direction: column;
+    
+                        .stock-current-balance {
+                            color: $color-white;
+                            font-size: $paragraph-size;
+                            padding-bottom: 25px;
+                        }
+        
+                        .stock-price {
+                            color: $color-white;
+                            font-size: $current-balance-font-size;
+                        }
+                    }
+    
+                    .rate-stock-price {
+                        color: #0ed198;
+                        font-size: $stock-font-size;
+    
+                        span {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+
+
+
+
+            .second-stock-container {
+                @include stockBg("../images/sec.svg");
+    
+                .stock-price-container {
+                    display: flex;
+                    justify-content: space-between;
+    
+                    .stock-main-price {
+                        display: flex;
+                        flex-direction: column;
+    
+                        .stock-current-balance {
+                            color: $color-white;
+                            font-size: $paragraph-size;
+                            margin-bottom: 25px;
+                        }
+        
+                        .stock-price {
+                            color: $color-white;
+                            font-size: $current-balance-font-size;
+                            
+                        }
+                    }
+                }
+            }
+
+
+
+
+
+            .third-stock-container {
+                @include stockBg("../images/tir.svg");
+    
+                .stock-price-container {
+                    display: flex;
+                    justify-content: space-between;
+    
+                    .stock-main-price {
+                        display: flex;
+                        flex-direction: column;
+    
+                        .stock-current-balance {
+                            color: $color-white;
+                            font-size: $paragraph-size;
+                            padding-bottom: 25px;
+                        }
+        
+                        .stock-price {
+                            color: $color-white;
+                            font-size: $current-balance-font-size;
+                            
+                        }
+                    }
+                }
+            }
+
+
+
+            .fourth-stock-container {
+                @include stockBg("../images/four.svg");
+    
+                .stock-price-container {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+    
+                    .stock-main-price {
+                        display: flex;
+                        flex-direction: row;
+
+                        .btn-container {
+                            @include button-container();
+                            align-items: flex-start;
+                            margin-right: 10px;
+
+                            button {
+                                @include svg-btn();
+                                align-items: flex-start;
+
+                                .svg-container {
+                                    @include svg-container();
+                                    align-items: flex-start;
+
+                                    img {
+                                        width: 40px;
+                                        height: 40px;
+                                    }
+                                }
+
+                                
+                            }
+                        }
+    
+                        .stock-balance {
+                            color: $color-white;
+                            font-size: 16px;
+                            // padding-bottom: 25px;
+                        }
+        
+                        .stock-price {
+                            color: $color-white;
+                            font-size: 15px;
+                            
+                            
+                        }
+                    }
+
+
+
+    
+                    .stock-price-display {
+                        display: flex;
+                        flex-direction: column;
+
+                        .stock-header-price {
+                            color: #ff8309;
+                            font-size: 15px;
+                        }
+                        .rate-stock-price {
+                            font-size: $stock-font-size;
+                            color: #ff3636;
+        
+                            span {
+                                margin-right: 5px;
+
+                                img {
+                                    height: 12px
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .scroll-btn {
+                    @include button-container();
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    button {
+                        @include svg-btn();
+
+                        .svg-container {
+                            @include svg-container();
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        .assets-container {
+            display: grid;
+            // align-items: center;
+            grid-template-columns: 1fr 500px;
+            grid-gap: 20px;
+
+            .assets-display {
+                border: solid 1px #191e30;
+                background: #252d47;
+                box-shadow: 0px 2px 48px rgba(23,27,41,0.42);
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+
+                .assets-border-container {
+                    padding: 20px 0;
+                    border-bottom: 1px solid #d6d9e0;
+                    // min-height: 50px;
+                }
+
+                .assets-header {
+                    display: flex;
+                    align-items: center;
+                    .header-display {
+                        width: 100%;
+                        justify-content: flex-end;
+                        display: flex;
+                        align-items: center;
+                        font-size: $paragraph-size;
+                    }
+
+                    .start {
+                        justify-content: flex-start;
+                    }
+
+
+                }
+
+                .assets-currency-display {
+                    display: flex;
+                    align-items: center;
+                    .k {
+                        // align-items: flex-end;
+                        width: 100%;
+                        justify-content: flex-end;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .assets-currency {
+                        @include button-container();
+                        align-items: center;
+                        justify-content: flex-start;
+
+                        p {
+                            margin-left: 10px;
+                        }
+
+                        button {
+                            @include svg-btn();
+
+                            .svg-container {
+                                @include svg-container();
+
+                                img {
+                                    height: 30px;
+                                    width: 30px;
+                                }
+                            }
+                        }
+                    }
+
+                    .assets-rate {
+                        color: #ff3636;
+                        span {
+                            margin-right: 10px;
+
+                            img {
+                                height: 13px;
+                            }
+                        }
+                    }
+                    .good-assets-rate {
+                        color: #13d0a7;
+
+                        span {
+                            margin-right: 10px;
+
+                            img {
+                                height: 13px;
+                            }
+                        }
+                    }
+
+
+                }
+
+                
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .operations {
+                border: solid 1px #191e30;
+                background: #252d47;
+                box-shadow: 0px 2px 48px rgba(23,27,41,0.42);
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+
+                .operations-display {
+                    display: flex;
+                    flex-direction: column;
+
+                    .operations-container {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+
+                        a {
+                            text-decoration: none;
+                            color: inherit;
+                            width: 100%;
+
+                            .operations-details-display {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 15px 0;
+
+                                .operations-currency-detail {
+                                    display: flex;
+                                    flex-direction: row;
+
+                                    .operations-currency-type {
+                                        @include button-container();
+                                        margin-right: 10px;
+
+                                        button {
+                                            @include svg-btn();
+
+                                            .svg-container {
+                                                @include svg-container();
+
+                                                img {
+                                                    height: 40px;
+                                                    height: 40px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .operations-price {
+                                    color: #13d0a7;
+                                    font-size: 26px;
+                                    font-weight: 400;
+                                    // line-height: 35px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

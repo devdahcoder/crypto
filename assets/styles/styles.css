@@ -20,7 +20,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
 }
 
 body::-webkit-scrollbar-track {
@@ -28,12 +28,12 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-slider-thumb {
-  background: #3c4564;
+  background: #123bcf;
 }
 
 .sidebar-nav {
   width: 5rem;
-  height: 100%;
+  height: 100vh;
   background-color: #252d47;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
@@ -53,12 +53,12 @@ body::-webkit-slider-thumb {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
+  height: 100vh;
 }
 
 .sidebar-nav .sidebar-ul .sidebar-li {
   width: 100%;
-  padding: 10px 0;
+  padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,10 +73,19 @@ body::-webkit-slider-thumb {
 .sidebar-nav .sidebar-ul .sidebar-li a {
   text-decoration: none;
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.sidebar-nav .sidebar-ul .sidebar-li:last-child {
-  margin-top: auto;
+.sidebar-nav .sidebar-ul .sidebar-li a svg {
+  height: 30px;
 }
 
 main {
@@ -192,6 +201,7 @@ main header form .input-container label {
 }
 
 main header form .input-container label input {
+  color: #ffffff;
   background: #3c4564;
   width: 100%;
   height: 100%;
@@ -317,5 +327,795 @@ main header .user-display .user-image-container .user-image img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+main section {
+  padding: 1rem;
+}
+
+main section .currency-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 30px 0;
+}
+
+main section .currency-main .currency-header-text {
+  color: #ffffff;
+}
+
+main section .currency-main .currency-header-text p {
+  font-size: 35px;
+  line-height: 20px;
+  font-weight: 600px;
+}
+
+main section .currency-main .currency-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  margin: 10px 0 20px 0px;
+}
+
+main section .currency-main .currency-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main section .currency-main .currency-display .currency-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border: 0px solid #000;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  font: inherit;
+  vertical-align: baseline;
+  margin-right: 25px;
+  -webkit-filter: blur(0.32px);
+          filter: blur(0.32px);
+}
+
+main section .currency-main .currency-display .currency-list button {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  outline: none;
+}
+
+main section .currency-main .currency-display .currency-list button .svg-container {
+  cursor: pointer;
+  vertical-align: baseline;
+  border: 0 solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section .currency-main .currency-display .currency-list button .svg-container img {
+  width: 45px;
+  height: 45px;
+}
+
+main section .stock-container-display {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 1fr 200px 200px 350px;
+      grid-template-columns: 1fr 200px 200px 350px;
+  grid-gap: 20px;
+  margin: 50px 0;
+}
+
+main section .stock-container-display .stock {
+  border-radius: 10px;
+  height: 260px;
+  padding: 20px;
+  position: relative;
+}
+
+main section .stock-container-display .first-stock-container {
+  border: solid 1px #191e30;
+  background: #252d47;
+  -webkit-box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
+          box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
+  background-image: url("../images/dele.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+main section .stock-container-display .first-stock-container .stock-details-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section .stock-container-display .first-stock-container .stock-details-container .stock-main-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section .stock-container-display .first-stock-container .stock-details-container .stock-main-price .stock-current-balance {
+  color: #ffffff;
+  font-size: 17px;
+  padding-bottom: 25px;
+}
+
+main section .stock-container-display .first-stock-container .stock-details-container .stock-main-price .stock-price {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+main section .stock-container-display .first-stock-container .stock-details-container .rate-stock-price {
+  color: #0ed198;
+  font-size: 15px;
+}
+
+main section .stock-container-display .first-stock-container .stock-details-container .rate-stock-price span {
+  margin-right: 5px;
+}
+
+main section .stock-container-display .second-stock-container {
+  border: solid 1px #191e30;
+  background: #252d47;
+  -webkit-box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
+          box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
+  background-image: url("../images/sec.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+main section .stock-container-display .second-stock-container .stock-price-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section .stock-container-display .second-stock-container .stock-price-container .stock-main-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section .stock-container-display .second-stock-container .stock-price-container .stock-main-price .stock-current-balance {
+  color: #ffffff;
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+main section .stock-container-display .second-stock-container .stock-price-container .stock-main-price .stock-price {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+main section .stock-container-display .third-stock-container {
+  border: solid 1px #191e30;
+  background: #252d47;
+  -webkit-box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
+          box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
+  background-image: url("../images/tir.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+main section .stock-container-display .third-stock-container .stock-price-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section .stock-container-display .third-stock-container .stock-price-container .stock-main-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section .stock-container-display .third-stock-container .stock-price-container .stock-main-price .stock-current-balance {
+  color: #ffffff;
+  font-size: 17px;
+  padding-bottom: 25px;
+}
+
+main section .stock-container-display .third-stock-container .stock-price-container .stock-main-price .stock-price {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+main section .stock-container-display .fourth-stock-container {
+  border: solid 1px #191e30;
+  background: #252d47;
+  -webkit-box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
+          box-shadow: 0px 2px 48px 1px rgba(23, 27, 41, 0.43);
+  background-image: url("../images/four.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container .stock-main-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container .stock-main-price .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border: 0px solid #000;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-right: 10px;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container .stock-main-price .btn-container button {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  outline: none;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container .stock-main-price .btn-container button .svg-container {
+  cursor: pointer;
+  vertical-align: baseline;
+  border: 0 solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container .stock-main-price .btn-container button .svg-container img {
+  width: 40px;
+  height: 40px;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container .stock-main-price .stock-balance {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container .stock-main-price .stock-price {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container .stock-price-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container .stock-price-display .stock-header-price {
+  color: #ff8309;
+  font-size: 15px;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container .stock-price-display .rate-stock-price {
+  font-size: 15px;
+  color: #ff3636;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container .stock-price-display .rate-stock-price span {
+  margin-right: 5px;
+}
+
+main section .stock-container-display .fourth-stock-container .stock-price-container .stock-price-display .rate-stock-price span img {
+  height: 12px;
+}
+
+main section .stock-container-display .fourth-stock-container .scroll-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border: 0px solid #000;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  font: inherit;
+  vertical-align: baseline;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+main section .stock-container-display .fourth-stock-container .scroll-btn button {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  outline: none;
+}
+
+main section .stock-container-display .fourth-stock-container .scroll-btn button .svg-container {
+  cursor: pointer;
+  vertical-align: baseline;
+  border: 0 solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section .assets-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 500px;
+      grid-template-columns: 1fr 500px;
+  grid-gap: 20px;
+}
+
+main section .assets-container .assets-display {
+  border: solid 1px #191e30;
+  background: #252d47;
+  -webkit-box-shadow: 0px 2px 48px rgba(23, 27, 41, 0.42);
+          box-shadow: 0px 2px 48px rgba(23, 27, 41, 0.42);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+
+main section .assets-container .assets-display .assets-border-container {
+  padding: 20px 0;
+  border-bottom: 1px solid #d6d9e0;
+}
+
+main section .assets-container .assets-display .assets-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section .assets-container .assets-display .assets-header .header-display {
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 17px;
+}
+
+main section .assets-container .assets-display .assets-header .start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main section .assets-container .assets-display .assets-currency-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section .assets-container .assets-display .assets-currency-display .k {
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section .assets-container .assets-display .assets-currency-display .assets-currency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border: 0px solid #000;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  font: inherit;
+  vertical-align: baseline;
+  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main section .assets-container .assets-display .assets-currency-display .assets-currency p {
+  margin-left: 10px;
+}
+
+main section .assets-container .assets-display .assets-currency-display .assets-currency button {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  outline: none;
+}
+
+main section .assets-container .assets-display .assets-currency-display .assets-currency button .svg-container {
+  cursor: pointer;
+  vertical-align: baseline;
+  border: 0 solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section .assets-container .assets-display .assets-currency-display .assets-currency button .svg-container img {
+  height: 30px;
+  width: 30px;
+}
+
+main section .assets-container .assets-display .assets-currency-display .assets-rate {
+  color: #ff3636;
+}
+
+main section .assets-container .assets-display .assets-currency-display .assets-rate span {
+  margin-right: 10px;
+}
+
+main section .assets-container .assets-display .assets-currency-display .assets-rate span img {
+  height: 13px;
+}
+
+main section .assets-container .assets-display .assets-currency-display .good-assets-rate {
+  color: #13d0a7;
+}
+
+main section .assets-container .assets-display .assets-currency-display .good-assets-rate span {
+  margin-right: 10px;
+}
+
+main section .assets-container .assets-display .assets-currency-display .good-assets-rate span img {
+  height: 13px;
+}
+
+main section .assets-container .operations {
+  border: solid 1px #191e30;
+  background: #252d47;
+  -webkit-box-shadow: 0px 2px 48px rgba(23, 27, 41, 0.42);
+          box-shadow: 0px 2px 48px rgba(23, 27, 41, 0.42);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+
+main section .assets-container .operations .operations-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section .assets-container .operations .operations-display .operations-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main section .assets-container .operations .operations-display .operations-container a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+main section .assets-container .operations .operations-display .operations-container a .operations-details-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 0;
+}
+
+main section .assets-container .operations .operations-display .operations-container a .operations-details-display .operations-currency-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main section .assets-container .operations .operations-display .operations-container a .operations-details-display .operations-currency-detail .operations-currency-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border: 0px solid #000;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  font: inherit;
+  vertical-align: baseline;
+  margin-right: 10px;
+}
+
+main section .assets-container .operations .operations-display .operations-container a .operations-details-display .operations-currency-detail .operations-currency-type button {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  outline: none;
+}
+
+main section .assets-container .operations .operations-display .operations-container a .operations-details-display .operations-currency-detail .operations-currency-type button .svg-container {
+  cursor: pointer;
+  vertical-align: baseline;
+  border: 0 solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section .assets-container .operations .operations-display .operations-container a .operations-details-display .operations-currency-detail .operations-currency-type button .svg-container img {
+  height: 40px;
+  height: 40px;
+}
+
+main section .assets-container .operations .operations-display .operations-container a .operations-details-display .operations-price {
+  color: #13d0a7;
+  font-size: 26px;
+  font-weight: 400;
 }
 /*# sourceMappingURL=styles.css.map */
